@@ -1,0 +1,66 @@
+package Algorithms;
+
+import Components.CurrentProcess;
+import Components.process;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Scott Charles & Daniel Bahrami
+ */
+public class SRTF extends Algorithm {
+
+    public SRTF(ArrayList<process> processList) {
+        super(processList);
+    }
+
+    @Override
+    public CurrentProcess nextMove(int currentTime) {
+        process runningProcess = null;
+        addArrivedToWaitingQueue(currentTime);
+
+        sortByremainingTime(readyQueue);
+
+        boolean endOfAlgorithm = waitingQueue.isEmpty() && readyQueue.isEmpty();
+        boolean waiting = !waitingQueue.isEmpty() && readyQueue.isEmpty();
+        boolean notEmpty = !readyQueue.isEmpty();
+        
+        if (endOfAlgorithm) 
+        {
+        	endOfProcess(runningProcess, currentProcess);
+        } 
+        else if (waiting) 
+        {
+        	waitingForProcess(runningProcess, currentProcess);
+        } 
+        else if (notEmpty) 
+        {
+
+        	runningProcess = readyQueue.get(0);
+        	incWaitTime(runningProcess);
+
+            startRunningProcess(runningProcess, currentTime);
+        
+            boolean timeRemaining = runningProcess.remainingTime > 0;
+            boolean outOfTime = runningProcess.remainingTime == 0;
+            
+            if (timeRemaining) 
+            {
+                readyQueue.add(runningProcess);
+                sortByremainingTime(readyQueue);
+                
+            } 
+            else if (outOfTime) 
+            {
+            	replacedProcessWaitTimeNotSet(runningProcess, currentProcess, currentTime);
+                sortByremainingTime(readyQueue);
+            }
+
+            setProcess(runningProcess, currentProcess);    
+        }
+
+
+        return currentProcess;
+    }
+
+}
