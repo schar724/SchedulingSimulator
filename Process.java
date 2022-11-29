@@ -125,6 +125,10 @@ public class Process {
         Process copy = new Process(this.processNum, this.arrivalTime, this.burstTime);
         return copy;
     }
+
+    public String toString(){
+        return "Process Number: " + processNum + " Arrival Time: " + arrivalTime + " Burst Time: " + burstTime;
+    }
      
     //Comparison functions which puts the metrics in ascending order
     public static Comparator<Process> arrivalTimeComparator = new Comparator<Process>() {

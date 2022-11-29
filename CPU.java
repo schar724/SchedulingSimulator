@@ -37,15 +37,15 @@ public class CPU {
     
     //Which Algorithm was picked
     public static void setAlgorithm(String algorithm){
-    	if(algorithm == "FCFS") {
+    	if(algorithm == "First Come First Served") {
     		//First Come First Serve
     		CPU.algorithm = new FCFS(processList);
     	}
-    	else if(algorithm == "SJF") {
+    	else if(algorithm == "Shortest Job First") {
     		//Shortest process First
     		CPU.algorithm = new SJF(processList);
     	} 
-    	else if(algorithm == "SRTF") {
+    	else if(algorithm == "Shortest Remaining Time First") {
     		//Shortest Remaining Time First
     		CPU.algorithm = new SRTF(processList);
     	}else {

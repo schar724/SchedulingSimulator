@@ -28,9 +28,4 @@ public class CurrentProcess {
     public Process getCurrentProcess() {
         return CurrentProcess;
     }
-
-
-    
-    
-    
 }

@@ -125,5 +125,4 @@ public abstract class Algorithm {
         runningProcess.setTurnAroundTime();
         currentProcess.tableData.set(runningProcess.getprocessNum() - 1, runningProcess);
     }
-    
 }

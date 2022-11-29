@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.JLabel;
-import static javax.swing.SwingConstants.CENTER;
+// import static javax.swing.SwingConstants.CENTER;
 
 /**
  *
