@@ -14,7 +14,7 @@ public class Cell extends JLabel{
     
     public Cell(int processNum){
         //setLocation(0, y);
-        setPreferredSize(new Dimension(12, 100));
+        setPreferredSize(new Dimension(12, 50));
         setFont(new Font("Serif", Font.BOLD, 10));
         setCellInfo(processNum);
         setOpaque(true);

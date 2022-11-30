@@ -14,9 +14,11 @@ public abstract class Algorithm {
     
     
     public Algorithm(ArrayList<Process> processList){
+        this.processList = processList;
+        this.waitingQueue = new ArrayList<Process>(arrayListCopy(this.processList));
         currentProcess.setTableData(arrayListCopy(processList));
         this.processList = sortByArrivalTime(arrayListCopy(processList));
-        this.waitingQueue = arrayListCopy(this.processList);
+        
     }
     
     public abstract CurrentProcess nextMove (int currentTime);
