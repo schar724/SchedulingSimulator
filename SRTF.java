@@ -1,11 +1,11 @@
-
+/**
+ * Shortest Remaining Time First algorithm
+ * 
+ * @author Scott Charles & Daniel Bahrami
+ */
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Scott Charles & Daniel Bahrami
- */
 public class SRTF extends Algorithm {
 
     public SRTF(ArrayList<Process> processList) {
@@ -60,5 +60,4 @@ public class SRTF extends Algorithm {
         sortByremainingTime(readyQueue);
         return currentProcess;
     }
-
 }

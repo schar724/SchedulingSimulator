@@ -1,4 +1,6 @@
-
+/*
+ * Abstract algorithm class
+ */
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,7 +20,6 @@ public abstract class Algorithm {
         this.waitingQueue = new ArrayList<Process>(arrayListCopy(this.processList));
         currentProcess.setTableData(arrayListCopy(processList));
         this.processList = sortByArrivalTime(arrayListCopy(processList));
-        
     }
     
     public abstract CurrentProcess nextMove (int currentTime);

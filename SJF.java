@@ -1,11 +1,12 @@
 
+/**
+ * Shortest Job First Algorithm
+ * 
+ * @author Scott Charles & Daniel Bahrami
+ */
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Scott Charles & Daniel Bahrami
- */
 public class SJF extends Algorithm {
 
     boolean newprocess = true;

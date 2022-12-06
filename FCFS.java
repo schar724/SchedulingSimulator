@@ -1,4 +1,7 @@
-
+/*
+ * FCFS represents the First Come First Served algorithm.
+ * 
+ */
 
 import java.util.ArrayList;
 

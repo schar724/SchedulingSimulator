@@ -1,6 +1,13 @@
+/**
+ * GUI for the CPU Scheduling Algorithms Simulator implemented in Java Swing and NetBeans IDE
+ *
+ * @author scott
+ * 
+ * Inspiration for the Interface class was taken from the following source: https://github.com/sandunrajitha/CPU-Scheduling-Algorithms-Simulator
+ */
+
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.event.MouseEvent;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -9,10 +16,6 @@ import javax.swing.AbstractButton;
 import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author scott
- */
 public class Interface extends javax.swing.JFrame {
 
         String selectedAlgorithm = "First Come First Served";
@@ -128,7 +131,7 @@ public class Interface extends javax.swing.JFrame {
 
                 fcfs_rb.setText("First Come First Served");
                 sjf_rb.setText("Shortest Job First");
-                srt_rb.setText("Shortest Remaining Time");
+                srt_rb.setText("Shortest Remaining Time First");
                 rr_rb.setText("Round Robin");
 
                 jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -564,11 +567,9 @@ public class Interface extends javax.swing.JFrame {
         private void setMouseClicked(java.awt.event.MouseEvent evt) {
                 clearGanttChart();
                 clearTableData();
-
                 ArrayList<Process> processes = buildProcessList();
                 clearTable();
-                setTableData(processes);
-                
+                setTableData(processes);    
         }
 
         private void example1MouseClicked(java.awt.event.MouseEvent evt) {
@@ -707,14 +708,6 @@ public class Interface extends javax.swing.JFrame {
 
         }
 
-        private void clearLabels() {
-                avgWatingTime.setText("Average Waiting Time: ");
-                avgTurnaroundTime.setText("Average Turnaround Time: ");
-                Throughput.setText("Throughput: ");
-                labelCurrentProcess.setText("Current Process: ");
-                labelCurrentTime.setText("Current Time: ");
-        }
-
         private void radioButtonClicked(java.awt.event.MouseEvent evt) {
                 for (Enumeration<AbstractButton> buttons = buttonGroup1.getElements(); buttons.hasMoreElements();) {
                         AbstractButton button = buttons.nextElement();
@@ -815,7 +808,7 @@ public class Interface extends javax.swing.JFrame {
 
         private void updateLabels(Process proc) {
                 if (proc.getprocessNum() < 11 && proc.getprocessNum() > 0) {
-                        labelCurrentProcess.setText("Current Process: JOB " + proc.getprocessNum());
+                        labelCurrentProcess.setText("Current Process: P" + proc.getprocessNum());
                 } else if (proc.getprocessNum() == 11) {
                         labelCurrentProcess.setText("Current Process: WAITING");
                 } else if (proc.getprocessNum() == 0) {
@@ -824,7 +817,7 @@ public class Interface extends javax.swing.JFrame {
                         allProcessesDone = true;
                         cancelBtn.setEnabled(true);
                 }
-                labelCurrentTime.setText("Current Time: " + (currentTime ) + "");
+                labelCurrentTime.setText("Current Time: " + currentTime + "");
         }
 
         private void clearTableData() {

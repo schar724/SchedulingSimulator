@@ -1,11 +1,13 @@
 
+/**
+ *
+ * Represents a process in the operating system
+ * 
+ * @author Scott Charles & Daniel Bahrami
+ */
 
 import java.util.Comparator;
 
-/**
- *
- * @author Scott Charles & Daniel Bahrami
- */
 public class Process {
     
     public int processNum;
@@ -112,7 +114,6 @@ public class Process {
         return started;
     }
     
-
     public int getRemainingTime() {
         return remainingTime;
     }
@@ -130,14 +131,12 @@ public class Process {
         return "Process Number: " + processNum + " Arrival Time: " + arrivalTime + " Burst Time: " + burstTime;
     }
      
-    //Comparison functions which puts the metrics in ascending order
     public static Comparator<Process> arrivalTimeComparator = new Comparator<Process>() {
 
 	public int compare(Process p1, Process p2) {
 	   int arrivalTime1 = p1.getArrivalTime();
 	   int arrivalTime2 = p2.getArrivalTime();
 
-	   //Sort in Ascending Order
 	   return arrivalTime1 - arrivalTime2;
     }};
     
@@ -161,12 +160,6 @@ public class Process {
      return remainingTime1 - remainingTime2;
     }};
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 47 * hash + this.processNum;
-        return hash;
-    }
 
     @Override
     public boolean equals(Object obj) {

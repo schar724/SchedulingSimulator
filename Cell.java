@@ -1,19 +1,17 @@
-
+/**
+ * Cell class used for the gantt chart. Represents one clock tick of a process.
+ * 
+ * @author Scott Charles & Daniel Bahrami
+ */
 
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.JLabel;
-// import static javax.swing.SwingConstants.CENTER;
 
-/**
- *
- * @author Scott Charles & Daniel Bahrami
- */
 public class Cell extends JLabel{
     
     public Cell(int processNum){
-        //setLocation(0, y);
         setPreferredSize(new Dimension(12, 50));
         setFont(new Font("Serif", Font.BOLD, 10));
         setCellInfo(processNum);
