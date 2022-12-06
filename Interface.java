@@ -893,6 +893,8 @@ public class Interface extends javax.swing.JFrame {
                 clearTableData();
                 processList.clear();
                 resetBtnMouseClicked(evt);
+                processList = buildProcessList();
+                setTableData(processList);
                 Interface intFace = new Interface(processList);
                 intFace.setVisible(true);
                 this.dispose();
