@@ -57,7 +57,7 @@ public class SRTF extends Algorithm {
             setProcess(runningProcess, currentProcess);    
         }
 
-
+        sortByremainingTime(readyQueue);
         return currentProcess;
     }
 

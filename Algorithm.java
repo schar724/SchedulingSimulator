@@ -23,7 +23,6 @@ public abstract class Algorithm {
     
     public abstract CurrentProcess nextMove (int currentTime);
 
-    
     public void addArrivedToWaitingQueue(int currentTime)
     {
     	boolean notEmpty = waitingQueue.isEmpty() == false;

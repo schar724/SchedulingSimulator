@@ -78,7 +78,12 @@ public class Interface extends javax.swing.JFrame {
                 resetBtn = new javax.swing.JButton();
                 randomBtn = new javax.swing.JButton();
                 singleStepBtn = new javax.swing.JButton();
-                resetResultsTable = new javax.swing.JButton();
+                example1 = new javax.swing.JButton();
+                example2 = new javax.swing.JButton();
+                example3 = new javax.swing.JButton();
+                example4 = new javax.swing.JButton();
+                example5 = new javax.swing.JButton();
+                set = new javax.swing.JButton();
 
                 buttonGroup1.add(fcfs_rb);
                 buttonGroup1.add(sjf_rb);
@@ -212,7 +217,7 @@ public class Interface extends javax.swing.JFrame {
                         }
                 });
 
-                cancelBtn.setText("Cancel");
+                cancelBtn.setText("Reset");
                 cancelBtn.addMouseListener(new java.awt.event.MouseAdapter() {
                         public void mouseClicked(java.awt.event.MouseEvent evt) {
                                 cancelBtnMouseClicked(evt);
@@ -225,13 +230,6 @@ public class Interface extends javax.swing.JFrame {
                                 singleStepBtnMouseClicked();
                         }
 
-                });
-
-                resetResultsTable.setText("Reset Results Table");
-                resetResultsTable.addMouseListener(new java.awt.event.MouseAdapter() {
-                        public void mouseClicked(java.awt.event.MouseEvent evt) {
-                                resetResultsTableMouseClicked(evt);
-                        }
                 });
 
                 resultsTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -324,9 +322,6 @@ public class Interface extends javax.swing.JFrame {
                                                                                                                 .addComponent(runBtn)
                                                                                                                 .addPreferredGap(
                                                                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                                                .addComponent(resetResultsTable)
-                                                                                                                .addPreferredGap(
-                                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                                                 .addComponent(cancelBtn)
                                                                                                                 .addGap(1, 1, 1))
                                                                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
@@ -374,7 +369,6 @@ public class Interface extends javax.swing.JFrame {
                                                                                                                                 javax.swing.GroupLayout.Alignment.BASELINE)
                                                                                                                 .addComponent(singleStepBtn)
                                                                                                                 .addComponent(runBtn)
-                                                                                                                .addComponent(resetResultsTable)
                                                                                                                 .addComponent(cancelBtn)))
                                                                 .addPreferredGap(
                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -443,6 +437,48 @@ public class Interface extends javax.swing.JFrame {
                         }
                 });
 
+                set.setText("Set");
+                set.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                setMouseClicked(evt);
+                        }
+                });
+
+                example1.setText("Example 1");
+                example1.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                example1MouseClicked(evt);
+                        }
+                });
+
+                example2.setText("Example 2");
+                example2.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                example2MouseClicked(evt);
+                        }
+                });
+
+                example3.setText("Example 3");
+                example3.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                example3MouseClicked(evt);
+                        }
+                });
+
+                example4.setText("Example 4");
+                example4.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                example4MouseClicked(evt);
+                        }
+                });
+
+                example5.setText("Example 5");
+                example5.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                example5MouseClicked(evt);
+                        }
+                });
+
                 javax.swing.GroupLayout changeDataLayout = new javax.swing.GroupLayout(changeData);
                 changeData.setLayout(changeDataLayout);
                 changeDataLayout.setHorizontalGroup(
@@ -458,7 +494,26 @@ public class Interface extends javax.swing.JFrame {
                                                                                                 .addComponent(randomBtn)
                                                                                                 .addPreferredGap(
                                                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                                .addComponent(resetBtn))
+                                                                                                .addComponent(resetBtn)
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(set)
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(example1)
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(example2)
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(example3)
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(example4)
+                                                                                                .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(example5))
+
                                                                                 .addComponent(jScrollPane2,
                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
@@ -478,7 +533,13 @@ public class Interface extends javax.swing.JFrame {
                                                                                 changeDataLayout.createParallelGroup(
                                                                                                 javax.swing.GroupLayout.Alignment.BASELINE)
                                                                                                 .addComponent(resetBtn)
-                                                                                                .addComponent(randomBtn))
+                                                                                                .addComponent(randomBtn)
+                                                                                                .addComponent(set)
+                                                                                                .addComponent(example1)
+                                                                                                .addComponent(example2)
+                                                                                                .addComponent(example3)
+                                                                                                .addComponent(example4)
+                                                                                                .addComponent(example5))
                                                                 .addContainerGap(323, Short.MAX_VALUE)));
 
                 jTabbedPane1.addTab("Change Data", changeData);
@@ -500,15 +561,150 @@ public class Interface extends javax.swing.JFrame {
                 pack();
         }// </editor-fold>
 
-        private void resetResultsTableMouseClicked(MouseEvent evt) {
-                processList = buildProcessList();
-                CPU.setprocessList(processList);
-                setTableData(processList);
+        private void setMouseClicked(java.awt.event.MouseEvent evt) {
                 clearGanttChart();
-                clearLabels();
-                currentTime = 0;
-                // CPU.setAlgorithm(selectedAlgorithm);
-                allProcessesDone = false;
+                clearTableData();
+
+                ArrayList<Process> processes = buildProcessList();
+                clearTable();
+                setTableData(processes);
+                
+        }
+
+        private void example1MouseClicked(java.awt.event.MouseEvent evt) {
+                clearGanttChart();
+                clearTableData();
+                Random rand = new Random();
+                
+                processData.setValueAt("0", 0, 1);
+                processData.setValueAt("1", 1, 1);
+                processData.setValueAt("2", 2, 1);
+                processData.setValueAt("3", 3, 1);
+                processData.setValueAt("4", 4, 1);
+                processData.setValueAt("5", 5, 1);
+                processData.setValueAt("6", 6, 1);
+                processData.setValueAt("7", 7, 1);
+
+                for (int j = 0; j < processData.getRowCount(); j++) {
+                        int k = rand.nextInt(20);
+                        k += 1;
+                        processData.setValueAt(k, j, 2);
+                }
+
+                ArrayList<Process> processes = buildProcessList();
+                clearTable();
+                setTableData(processes);
+        }
+
+        private void example2MouseClicked(java.awt.event.MouseEvent evt) {
+                clearGanttChart();
+                clearTableData();
+                
+                processData.setValueAt("0", 0, 1);
+                processData.setValueAt("3", 1, 1);
+                processData.setValueAt("6", 2, 1);
+                processData.setValueAt("9", 3, 1);
+                processData.setValueAt("12", 4, 1);
+                processData.setValueAt("15", 5, 1);
+                processData.setValueAt("18", 6, 1);
+                processData.setValueAt("21", 7, 1);
+
+                processData.setValueAt("14", 0, 2);
+                processData.setValueAt("12", 1, 2);
+                processData.setValueAt("10", 2, 2);
+                processData.setValueAt("8", 3, 2);
+                processData.setValueAt("6", 4, 2);
+                processData.setValueAt("4", 5, 2);
+                processData.setValueAt("2", 6, 2);
+                processData.setValueAt("1", 7, 2);
+
+                ArrayList<Process> processes = buildProcessList();
+                clearTable();
+                setTableData(processes);
+        }
+
+        private void example3MouseClicked(java.awt.event.MouseEvent evt) {
+                clearGanttChart();
+                clearTableData();
+                
+                processData.setValueAt("0", 0, 1);
+                processData.setValueAt("3", 1, 1);
+                processData.setValueAt("6", 2, 1);
+                processData.setValueAt("9", 3, 1);
+                processData.setValueAt("12", 4, 1);
+                processData.setValueAt("15", 5, 1);
+                processData.setValueAt("18", 6, 1);
+                processData.setValueAt("21", 7, 1);
+
+                processData.setValueAt("1", 0, 2);
+                processData.setValueAt("2", 1, 2);
+                processData.setValueAt("4", 2, 2);
+                processData.setValueAt("6", 3, 2);
+                processData.setValueAt("8", 4, 2);
+                processData.setValueAt("10", 5, 2);
+                processData.setValueAt("12", 6, 2);
+                processData.setValueAt("14", 7, 2);
+
+                ArrayList<Process> processes = buildProcessList();
+                clearTable();
+                setTableData(processes);
+
+        }
+
+        private void example4MouseClicked(java.awt.event.MouseEvent evt) {
+                clearGanttChart();
+                clearTableData();
+                
+                processData.setValueAt("0", 0, 1);
+                processData.setValueAt("5", 1, 1);
+                processData.setValueAt("5", 2, 1);
+                processData.setValueAt("5", 3, 1);
+                processData.setValueAt("5", 4, 1);
+                processData.setValueAt("5", 5, 1);
+                processData.setValueAt("5", 6, 1);
+                processData.setValueAt("5", 7, 1);
+
+                processData.setValueAt("9", 0, 2);
+                processData.setValueAt("5", 1, 2);
+                processData.setValueAt("4", 2, 2);
+                processData.setValueAt("10", 3, 2);
+                processData.setValueAt("11", 4, 2);
+                processData.setValueAt("11", 5, 2);
+                processData.setValueAt("5", 6, 2);
+                processData.setValueAt("12", 7, 2);
+
+                ArrayList<Process> processes = buildProcessList();
+                clearTable();
+                setTableData(processes);
+        }
+
+        private void example5MouseClicked(java.awt.event.MouseEvent evt) {
+                clearGanttChart();
+                clearTableData();
+                
+                
+                processData.setValueAt("0", 0, 1);
+                processData.setValueAt("8", 1, 1);
+                processData.setValueAt("8", 2, 1);
+                processData.setValueAt("4", 3, 1);
+                processData.setValueAt("12", 4, 1);
+                processData.setValueAt("22", 5, 1);
+                processData.setValueAt("13", 6, 1);
+                processData.setValueAt("21", 7, 1);
+
+                processData.setValueAt("5", 0, 2);
+                processData.setValueAt("5", 1, 2);
+                processData.setValueAt("5", 2, 2);
+                processData.setValueAt("5", 3, 2);
+                processData.setValueAt("5", 4, 2);
+                processData.setValueAt("5", 5, 2);
+                processData.setValueAt("5", 6, 2);
+                processData.setValueAt("5", 7, 2);
+
+                ArrayList<Process> processes = buildProcessList();
+                clearTable();
+                setTableData(processes);
+
         }
 
         private void clearLabels() {
@@ -628,7 +824,7 @@ public class Interface extends javax.swing.JFrame {
                         allProcessesDone = true;
                         cancelBtn.setEnabled(true);
                 }
-                labelCurrentTime.setText("Current Time: " + currentTime + "");
+                labelCurrentTime.setText("Current Time: " + (currentTime ) + "");
         }
 
         private void clearTableData() {
@@ -698,6 +894,7 @@ public class Interface extends javax.swing.JFrame {
         private void cancelBtnMouseClicked(java.awt.event.MouseEvent evt) {
                 clearTable();
                 clearTableData();
+                processList.clear();
                 resetBtnMouseClicked(evt);
                 Interface intFace = new Interface(processList);
                 intFace.setVisible(true);
@@ -811,7 +1008,12 @@ public class Interface extends javax.swing.JFrame {
         private javax.swing.JRadioButton sjf_rb;
         private javax.swing.JRadioButton srt_rb;
         private javax.swing.JButton singleStepBtn;
-        private javax.swing.JButton resetResultsTable;
+        private javax.swing.JButton example1;
+        private javax.swing.JButton example2;
+        private javax.swing.JButton example3;
+        private javax.swing.JButton example4;
+        private javax.swing.JButton example5;
+        private javax.swing.JButton set;
         // End of variables declaration
 
 }
