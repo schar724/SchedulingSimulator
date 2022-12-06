@@ -21,7 +21,7 @@ public class Interface extends javax.swing.JFrame {
         String selectedAlgorithm = "First Come First Served";
         int quantumNum = 1;
         int currentTime = 0;
-        ArrayList<Process> processList = new ArrayList<Process>();
+        ArrayList<Process> processList = new ArrayList<Process>(8);
         boolean allProcessesDone = false;
         boolean algorithmSet = false;
         boolean quantumSet = false;
@@ -31,11 +31,13 @@ public class Interface extends javax.swing.JFrame {
          */
         public Interface() {
                 initComponents();
+                buildProcessList();
                 initGanttChart();
         }
 
         public Interface(ArrayList<Process> procList) {
                 initComponents();
+                buildProcessList();
                 initGanttChart();
                 this.processList = procList;
                 setTableData(procList);
@@ -87,6 +89,8 @@ public class Interface extends javax.swing.JFrame {
                 example4 = new javax.swing.JButton();
                 example5 = new javax.swing.JButton();
                 set = new javax.swing.JButton();
+
+                
 
                 buttonGroup1.add(fcfs_rb);
                 buttonGroup1.add(sjf_rb);
@@ -563,7 +567,7 @@ public class Interface extends javax.swing.JFrame {
 
                 pack();
         }// </editor-fold>
-
+        
         private void setMouseClicked(java.awt.event.MouseEvent evt) {
                 clearGanttChart();
                 clearTableData();
