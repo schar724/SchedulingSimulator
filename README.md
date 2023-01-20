@@ -17,5 +17,5 @@ The user can single step or run the algorithm in full. Individual process inform
 
 The user can set custom or random process data or choose from a variety of examples.
 
-![3](https://user-images.githubusercontent.com/77460587/213626224-d0c82be3-95a1-4f26-af6d-bee5c86fbf6a.png)
+![4](https://user-images.githubusercontent.com/77460587/213626351-bbdcaeac-e18f-4338-9b1d-452d44565eca.png)
 
