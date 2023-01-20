@@ -7,13 +7,13 @@ The UI was developed using JavaSwing. The coloured bars represent one 'clock tic
 Average waiting time, average turn around time and throughput are calculated and displayed when the 
 algorithm has completed.
 
-##Main View
+## Main View
 
 The user can single step or run the algorithm in full. Individual process information is updated as the algorithm progresses.
 
 ![1](https://user-images.githubusercontent.com/77460587/213622148-38c92e39-2ec1-4f51-a2e4-bb0eb49ebb41.png)
 
-##Process Data View
+## Process Data View
 
 The user can set custom or random process data or choose from a variety of examples.
 
